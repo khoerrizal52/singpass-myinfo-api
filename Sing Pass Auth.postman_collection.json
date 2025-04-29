@@ -1,0 +1,449 @@
+{
+	"info": {
+		"_postman_id": "068387e6-5a1d-4b8f-abbf-ef94292418ab",
+		"name": "Sing Pass Auth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16581943",
+		"_collection_link": "https://winter-crater-13452.postman.co/workspace/Khoer-Space~e0451107-6021-4d6a-905f-21fa501a4f4b/collection/16581943-068387e6-5a1d-4b8f-abbf-ef94292418ab?action=share&source=collection_link&creator=16581943"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"johndoe1\",\r\n  \"email\": \"johndoe@example.com\",\r\n  \"first_name\": \"John\",\r\n  \"last_name\": \"Doe\",\r\n  \"password\": \"StrongPassword123!\",\r\n  \"password2\": \"StrongPassword123!\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"johndoe1\",\r\n  \"email\": \"johndoe@example.com\",\r\n  \"first_name\": \"John\",\r\n  \"last_name\": \"Doe\",\r\n  \"password\": \"StrongPassword123!\",\r\n  \"password2\": \"StrongPassword123!\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/user/register",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 29 Apr 2025 02:59:46 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "91"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"username\": \"johndoe1\",\n    \"email\": \"johndoe@example.com\",\n    \"first_name\": \"John\",\n    \"last_name\": \"Doe\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"johndoe\",\r\n    \"password\": \"StrongPassword123!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"johndoe\",\r\n    \"password\": \"StrongPassword123!\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/user/login",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 29 Apr 2025 03:00:35 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "483"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NTk4MjAzNSwiaWF0IjoxNzQ1ODk1NjM1LCJqdGkiOiI1OGNiNmVkNTNiN2I0ZDc1OWY3NDhlYThjYzEyNWI5OSIsInVzZXJfaWQiOjF9.AXHK-UX_XeINFzphn47yozXs6dEF7mBzCGBl0ofHDgI\",\n    \"access\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1ODk1OTM1LCJpYXQiOjE3NDU4OTU2MzUsImp0aSI6IjEwZWExM2I1NGUxMjQ5NDVhMDBhZWE0ZjY1OWQ5YmVlIiwidXNlcl9pZCI6MX0.cUBgReXe_sXoDLOSe7jgrK6K4rw-foYK8ME08JB2fro\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Sing Pass",
+			"item": [
+				{
+					"name": "Auth",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/singpass-auth",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"singpass-auth"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Auth",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/singpass-auth",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"singpass-auth"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 29 Apr 2025 03:02:30 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "OPTIONS, GET"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "573"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"url-redirect\": \"https://test.api.myinfo.gov.sg/com/v4/authorize?client_id=STG-202327956K-ABNK-BNPLAPPLN&scope=uinfin%20name%20sex%20race%20dob%20residentialstatus%20nationality%20birthcountry%20passtype%20passstatus%20passexpirydate%20employmentsector%20mobileno%20email%20regadd%20housingtype%20hdbtype%20cpfcontributions%20noahistory%20ownerprivate%20employment%20occupation%20cpfemployers%20marital&purpose_id=7ed6f2ce&response_type=code&code_challenge=p5JcCKGI39Sjf-I0OJZ0ZQ_NioI2DUbuDcw4UpePyQk&code_challenge_method=S256&redirect_uri=http://localhost:3001/callback\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Callback",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/singpass-auth/callback?code=myinfo-com-19aoMrZPkZrr2itRiOCz8Nq7C0BGutmKRRYusvWO",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"singpass-auth",
+								"callback"
+							],
+							"query": [
+								{
+									"key": "code",
+									"value": "myinfo-com-19aoMrZPkZrr2itRiOCz8Nq7C0BGutmKRRYusvWO"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Callback",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/singpass-auth/callback?code=myinfo-com-19aoMrZPkZrr2itRiOCz8Nq7C0BGutmKRRYusvWO",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"singpass-auth",
+										"callback"
+									],
+									"query": [
+										{
+											"key": "code",
+											"value": "myinfo-com-19aoMrZPkZrr2itRiOCz8Nq7C0BGutmKRRYusvWO"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 29 Apr 2025 03:09:09 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "5799"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"person_data\": {\n        \"employmentsector\": {\n            \"lastupdated\": \"2024-01-26\",\n            \"source\": \"3\",\n            \"classification\": \"C\",\n            \"value\": \"\"\n        },\n        \"uinfin\": {\n            \"lastupdated\": \"2024-01-26\",\n            \"source\": \"1\",\n            \"classification\": \"C\",\n            \"value\": \"S0290695C\"\n        },\n        \"name\": {\n            \"lastupdated\": \"2024-01-26\",\n            \"source\": \"1\",\n            \"classification\": \"C\",\n            \"value\": \"BERNARD LI GUO HAO\"\n        },\n        \"sex\": {\n            \"lastupdated\": \"2024-01-26\",\n            \"code\": \"F\",\n            \"source\": \"1\",\n            \"classification\": \"C\",\n            \"desc\": \"FEMALE\"\n        },\n        \"race\": {\n            \"lastupdated\": \"2024-01-26\",\n            \"code\": \"CN\",\n            \"source\": \"1\",\n            \"classification\": \"C\",\n            \"desc\": \"CHINESE\"\n        },\n        \"dob\": {\n            \"lastupdated\": \"2024-01-26\",\n            \"source\": \"1\",\n            \"classification\": \"C\",\n            \"value\": \"1991-12-04\"\n        },\n        \"residentialstatus\": {\n            \"lastupdated\": \"2024-01-26\",\n            \"code\": \"P\",\n            \"source\": \"1\",\n            \"classification\": \"C\",\n            \"desc\": \"PR\"\n        },\n        \"nationality\": {\n            \"lastupdated\": \"2024-01-26\",\n            \"code\": \"MY\",\n            \"source\": \"1\",\n            \"classification\": \"C\",\n            \"desc\": \"MALAYSIAN\"\n        },\n        \"birthcountry\": {\n            \"lastupdated\": \"2024-01-26\",\n            \"code\": \"MY\",\n            \"source\": \"1\",\n            \"classification\": \"C\",\n            \"desc\": \"MALAYSIA\"\n        },\n        \"passtype\": {\n            \"lastupdated\": \"2024-01-26\",\n            \"code\": \"\",\n            \"source\": \"3\",\n            \"classification\": \"C\",\n            \"desc\": \"\"\n        },\n        \"passstatus\": {\n            \"lastupdated\": \"2024-01-26\",\n            \"source\": \"3\",\n            \"classification\": \"C\",\n            \"value\": \"\"\n        },\n        \"passexpirydate\": {\n            \"lastupdated\": \"2024-01-26\",\n            \"source\": \"3\",\n            \"classification\": \"C\",\n            \"value\": \"\"\n        },\n        \"mobileno\": {\n            \"lastupdated\": \"2024-01-26\",\n            \"source\": \"4\",\n            \"classification\": \"C\",\n            \"areacode\": {\n                \"value\": \"65\"\n            },\n            \"prefix\": {\n                \"value\": \"+\"\n            },\n            \"nbr\": {\n                \"value\": \"87163551\"\n            }\n        },\n        \"email\": {\n            \"lastupdated\": \"2024-01-26\",\n            \"source\": \"4\",\n            \"classification\": \"C\",\n            \"value\": \"dbstesting03@gmail.com\"\n        },\n        \"regadd\": {\n            \"country\": {\n                \"code\": \"SG\",\n                \"desc\": \"SINGAPORE\"\n            },\n            \"unit\": {\n                \"value\": \"128\"\n            },\n            \"street\": {\n                \"value\": \"BEDOK NORTH AVENUE 4\"\n            },\n            \"lastupdated\": \"2024-01-26\",\n            \"block\": {\n                \"value\": \"102\"\n            },\n            \"source\": \"1\",\n            \"postal\": {\n                \"value\": \"460102\"\n            },\n            \"classification\": \"C\",\n            \"floor\": {\n                \"value\": \"9\"\n            },\n            \"type\": \"SG\",\n            \"building\": {\n                \"value\": \"PEARL GARDEN\"\n            }\n        },\n        \"housingtype\": {\n            \"lastupdated\": \"2024-01-26\",\n            \"code\": \"131\",\n            \"source\": \"1\",\n            \"classification\": \"C\",\n            \"desc\": \"CONDOMINIUM\"\n        },\n        \"hdbtype\": {\n            \"lastupdated\": \"2024-01-26\",\n            \"code\": \"\",\n            \"source\": \"1\",\n            \"classification\": \"C\",\n            \"desc\": \"\"\n        },\n        \"cpfcontributions\": {\n            \"lastupdated\": \"2024-01-26\",\n            \"source\": \"1\",\n            \"history\": [\n                {\n                    \"date\": {\n                        \"value\": \"2022-10-08\"\n                    },\n                    \"employer\": {\n                        \"value\": \"DBS BANK LTD\"\n                    },\n                    \"amount\": {\n                        \"value\": 2035\n                    },\n                    \"month\": {\n                        \"value\": \"2022-10\"\n                    }\n                },\n                {\n                    \"date\": {\n                        \"value\": \"2022-11-08\"\n                    },\n                    \"employer\": {\n                        \"value\": \"DBS BANK LTD\"\n                    },\n                    \"amount\": {\n                        \"value\": 2035\n                    },\n                    \"month\": {\n                        \"value\": \"2022-11\"\n                    }\n                },\n                {\n                    \"date\": {\n                        \"value\": \"2022-12-08\"\n                    },\n                    \"employer\": {\n                        \"value\": \"DBS BANK LTD\"\n                    },\n                    \"amount\": {\n                        \"value\": 2035\n                    },\n                    \"month\": {\n                        \"value\": \"2022-12\"\n                    }\n                },\n                {\n                    \"date\": {\n                        \"value\": \"2023-01-08\"\n                    },\n                    \"employer\": {\n                        \"value\": \"DBS BANK LTD\"\n                    },\n                    \"amount\": {\n                        \"value\": 2035\n                    },\n                    \"month\": {\n                        \"value\": \"2023-01\"\n                    }\n                },\n                {\n                    \"date\": {\n                        \"value\": \"2023-02-08\"\n                    },\n                    \"employer\": {\n                        \"value\": \"DBS BANK LTD\"\n                    },\n                    \"amount\": {\n                        \"value\": 2035\n                    },\n                    \"month\": {\n                        \"value\": \"2023-02\"\n                    }\n                },\n                {\n                    \"date\": {\n                        \"value\": \"2023-03-08\"\n                    },\n                    \"employer\": {\n                        \"value\": \"DBS BANK LTD\"\n                    },\n                    \"amount\": {\n                        \"value\": 2035\n                    },\n                    \"month\": {\n                        \"value\": \"2023-03\"\n                    }\n                },\n                {\n                    \"date\": {\n                        \"value\": \"2023-04-08\"\n                    },\n                    \"employer\": {\n                        \"value\": \"DBS BANK LTD\"\n                    },\n                    \"amount\": {\n                        \"value\": 2035\n                    },\n                    \"month\": {\n                        \"value\": \"2023-04\"\n                    }\n                },\n                {\n                    \"date\": {\n                        \"value\": \"2023-05-08\"\n                    },\n                    \"employer\": {\n                        \"value\": \"DBS BANK LTD\"\n                    },\n                    \"amount\": {\n                        \"value\": 2035\n                    },\n                    \"month\": {\n                        \"value\": \"2023-05\"\n                    }\n                },\n                {\n                    \"date\": {\n                        \"value\": \"2023-06-08\"\n                    },\n                    \"employer\": {\n                        \"value\": \"DBS BANK LTD\"\n                    },\n                    \"amount\": {\n                        \"value\": 2035\n                    },\n                    \"month\": {\n                        \"value\": \"2023-06\"\n                    }\n                },\n                {\n                    \"date\": {\n                        \"value\": \"2023-07-08\"\n                    },\n                    \"employer\": {\n                        \"value\": \"DBS BANK LTD\"\n                    },\n                    \"amount\": {\n                        \"value\": 2035\n                    },\n                    \"month\": {\n                        \"value\": \"2023-07\"\n                    }\n                },\n                {\n                    \"date\": {\n                        \"value\": \"2023-08-08\"\n                    },\n                    \"employer\": {\n                        \"value\": \"DBS BANK LTD\"\n                    },\n                    \"amount\": {\n                        \"value\": 2035\n                    },\n                    \"month\": {\n                        \"value\": \"2023-08\"\n                    }\n                },\n                {\n                    \"date\": {\n                        \"value\": \"2023-09-08\"\n                    },\n                    \"employer\": {\n                        \"value\": \"DBS BANK LTD\"\n                    },\n                    \"amount\": {\n                        \"value\": 2035\n                    },\n                    \"month\": {\n                        \"value\": \"2023-09\"\n                    }\n                },\n                {\n                    \"date\": {\n                        \"value\": \"2023-10-08\"\n                    },\n                    \"employer\": {\n                        \"value\": \"DBS BANK LTD\"\n                    },\n                    \"amount\": {\n                        \"value\": 2035\n                    },\n                    \"month\": {\n                        \"value\": \"2023-10\"\n                    }\n                },\n                {\n                    \"date\": {\n                        \"value\": \"2023-11-08\"\n                    },\n                    \"employer\": {\n                        \"value\": \"DBS BANK LTD\"\n                    },\n                    \"amount\": {\n                        \"value\": 2035\n                    },\n                    \"month\": {\n                        \"value\": \"2023-11\"\n                    }\n                },\n                {\n                    \"date\": {\n                        \"value\": \"2023-12-08\"\n                    },\n                    \"employer\": {\n                        \"value\": \"DBS BANK LTD\"\n                    },\n                    \"amount\": {\n                        \"value\": 2035\n                    },\n                    \"month\": {\n                        \"value\": \"2023-12\"\n                    }\n                }\n            ],\n            \"classification\": \"C\"\n        },\n        \"noahistory\": {\n            \"noas\": [\n                {\n                    \"amount\": {\n                        \"value\": 100000\n                    },\n                    \"trade\": {\n                        \"value\": 0\n                    },\n                    \"interest\": {\n                        \"value\": 0\n                    },\n                    \"yearofassessment\": {\n                        \"value\": \"2023\"\n                    },\n                    \"taxclearance\": {\n                        \"value\": \"N\"\n                    },\n                    \"employment\": {\n                        \"value\": 100000\n                    },\n                    \"rent\": {\n                        \"value\": 0\n                    },\n                    \"category\": {\n                        \"value\": \"ORIGINAL\"\n                    }\n                },\n                {\n                    \"amount\": {\n                        \"value\": 150000\n                    },\n                    \"trade\": {\n                        \"value\": 0\n                    },\n                    \"interest\": {\n                        \"value\": 0\n                    },\n                    \"yearofassessment\": {\n                        \"value\": \"2022\"\n                    },\n                    \"taxclearance\": {\n                        \"value\": \"N\"\n                    },\n                    \"employment\": {\n                        \"value\": 150000\n                    },\n                    \"rent\": {\n                        \"value\": 0\n                    },\n                    \"category\": {\n                        \"value\": \"ORIGINAL\"\n                    }\n                }\n            ],\n            \"lastupdated\": \"2024-01-26\",\n            \"source\": \"1\",\n            \"classification\": \"C\"\n        },\n        \"ownerprivate\": {\n            \"lastupdated\": \"2024-01-26\",\n            \"source\": \"1\",\n            \"classification\": \"C\",\n            \"value\": false\n        },\n        \"employment\": {\n            \"lastupdated\": \"2024-01-26\",\n            \"source\": \"2\",\n            \"classification\": \"C\",\n            \"value\": \"\"\n        },\n        \"occupation\": {\n            \"lastupdated\": \"2024-01-26\",\n            \"source\": \"2\",\n            \"classification\": \"C\",\n            \"value\": \"\"\n        },\n        \"cpfemployers\": {\n            \"lastupdated\": \"2024-01-26\",\n            \"source\": \"1\",\n            \"history\": [\n                {\n                    \"month\": {\n                        \"value\": \"2022-10\"\n                    },\n                    \"employer\": {\n                        \"value\": \"DBS BANK LTD\"\n                    }\n                },\n                {\n                    \"month\": {\n                        \"value\": \"2022-11\"\n                    },\n                    \"employer\": {\n                        \"value\": \"DBS BANK LTD\"\n                    }\n                },\n                {\n                    \"month\": {\n                        \"value\": \"2022-12\"\n                    },\n                    \"employer\": {\n                        \"value\": \"DBS BANK LTD\"\n                    }\n                },\n                {\n                    \"month\": {\n                        \"value\": \"2023-01\"\n                    },\n                    \"employer\": {\n                        \"value\": \"DBS BANK LTD\"\n                    }\n                },\n                {\n                    \"month\": {\n                        \"value\": \"2023-02\"\n                    },\n                    \"employer\": {\n                        \"value\": \"DBS BANK LTD\"\n                    }\n                },\n                {\n                    \"month\": {\n                        \"value\": \"2023-03\"\n                    },\n                    \"employer\": {\n                        \"value\": \"DBS BANK LTD\"\n                    }\n                },\n                {\n                    \"month\": {\n                        \"value\": \"2023-04\"\n                    },\n                    \"employer\": {\n                        \"value\": \"DBS BANK LTD\"\n                    }\n                },\n                {\n                    \"month\": {\n                        \"value\": \"2023-05\"\n                    },\n                    \"employer\": {\n                        \"value\": \"DBS BANK LTD\"\n                    }\n                },\n                {\n                    \"month\": {\n                        \"value\": \"2023-06\"\n                    },\n                    \"employer\": {\n                        \"value\": \"DBS BANK LTD\"\n                    }\n                },\n                {\n                    \"month\": {\n                        \"value\": \"2023-07\"\n                    },\n                    \"employer\": {\n                        \"value\": \"DBS BANK LTD\"\n                    }\n                },\n                {\n                    \"month\": {\n                        \"value\": \"2023-08\"\n                    },\n                    \"employer\": {\n                        \"value\": \"DBS BANK LTD\"\n                    }\n                },\n                {\n                    \"month\": {\n                        \"value\": \"2023-09\"\n                    },\n                    \"employer\": {\n                        \"value\": \"DBS BANK LTD\"\n                    }\n                },\n                {\n                    \"month\": {\n                        \"value\": \"2023-10\"\n                    },\n                    \"employer\": {\n                        \"value\": \"DBS BANK LTD\"\n                    }\n                },\n                {\n                    \"month\": {\n                        \"value\": \"2023-11\"\n                    },\n                    \"employer\": {\n                        \"value\": \"DBS BANK LTD\"\n                    }\n                },\n                {\n                    \"month\": {\n                        \"value\": \"2023-12\"\n                    },\n                    \"employer\": {\n                        \"value\": \"DBS BANK LTD\"\n                    }\n                }\n            ],\n            \"classification\": \"C\"\n        },\n        \"marital\": {\n            \"lastupdated\": \"2024-01-26\",\n            \"code\": \"1\",\n            \"source\": \"1\",\n            \"classification\": \"C\",\n            \"desc\": \"SINGLE\"\n        }\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{access_token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:8000",
+			"type": "string"
+		},
+		{
+			"key": "access_token",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
