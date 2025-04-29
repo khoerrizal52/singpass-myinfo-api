@@ -6,10 +6,6 @@ from django.conf import settings
 from rest_framework import status
 
 @api_view(['GET'])
-def home(request):
-    return Response("myinfo api is running")
-
-@api_view(['GET'])
 def singpass_auth(request):
     oauth_state = get_random_string(length=16)
     callback_url = settings.FRONTEND_CALLBACK_URL
