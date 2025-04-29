@@ -5,8 +5,8 @@ from rest_framework.test import APITestCase
 class UserAuthenticationTests(APITestCase):
 
     def setUp(self):
-        self.register_url = reverse('user-register')
-        self.login_url = reverse('user-login')
+        self.register_url = reverse('register')
+        self.login_url = reverse('login')
         self.user_data = {
             "username": "johndoe",
             "email": "johndoe@example.com",
